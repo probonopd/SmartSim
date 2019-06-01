@@ -11,8 +11,8 @@ script:
   - make -j$(nproc)
   - make install DESTDIR=$(readlink -f appdir) ; find appdir/
   # FIXME: The next two lines should be done by the Makefile instead
-  - mkdir -p usr/share/applications/ ; cp appdir/resources/smartsim.desktop usr/share/applications/
-  - mkdir -p usr/share/icons/hicolor/64x64/apps/ ; cp appdir/resources/images/icons/smartsim64.png usr/share/icons/hicolor/64x64/apps/smartsim.png
+  - mkdir -p appdir/usr/share/applications/ ; cp resources/smartsim.desktop appdir/usr/share/applications/
+  - mkdir -p appdir/usr/share/icons/hicolor/64x64/apps/ ; cp resources/images/icons/smartsim64.png appdir/usr/share/icons/hicolor/64x64/apps/smartsim.png
   - wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
   - chmod a+x linuxdeployqt-continuous-x86_64.AppImage
   - ./linuxdeployqt-continuous-x86_64.AppImage appdir/usr/share/applications/*.desktop -appimage
