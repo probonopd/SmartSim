@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=SmartSim
+GenericName=SmartSim
+Comment=A digital logic circuit design and simulation package
+Icon=smartsim
+Exec=smartsim
+NotShowIn=GNOME;XFCE;
+StartupNotify=true
+Categories=Education
