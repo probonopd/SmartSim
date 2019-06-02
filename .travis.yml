@@ -13,6 +13,7 @@ script:
   # FIXME: The next two lines should be done by the Makefile instead
   - mkdir -p appdir/usr/share/applications/ ; cp resources/smartsim.desktop appdir/usr/share/applications/
   - mkdir -p appdir/usr/share/icons/hicolor/64x64/apps/ ; cp resources/images/icons/smartsim64.png appdir/usr/share/icons/hicolor/64x64/apps/smartsim.png
+  - cp appdir/usr/share/icons/hicolor/64x64/apps/smartsim.png appdir/ # Why do I have to do this manually?
   - wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
   - chmod a+x linuxdeployqt-continuous-x86_64.AppImage
   - ./linuxdeployqt-continuous-x86_64.AppImage appdir/usr/share/applications/*.desktop -appimage
