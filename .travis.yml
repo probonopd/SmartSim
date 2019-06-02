@@ -8,7 +8,7 @@ install:
 
 script:
   - ./configure --prefix=/usr
-  - make -j$(nproc)
+  - make -j$(nproc) datadir="../share/"
   - make install DESTDIR=$(readlink -f appdir) ; find appdir/
   # FIXME: The next two lines should be done by the Makefile instead
   - mkdir -p appdir/usr/share/applications/ ; cp resources/smartsim.desktop appdir/usr/share/applications/
